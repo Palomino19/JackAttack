@@ -18,6 +18,36 @@
 
 .boardSpace {
   border: solid 1pt gray;
-  background-color: whitesmoke;
+  background-color: white;
   border-radius: 5%;
+  text-align: center;
+  background-repeat: no-repeat;
+}
+
+.spades {
+  background-image: url("../../assets/spades.png");
+  background-size: 100%;
+}
+
+.diamonds {
+  background-image: url("../../assets/diamonds.png");
+  background-size: 100%;
+}
+
+.clubs {
+  background-image: url("../../assets/clubs.png");
+  background-size: 80%;
+  background-position-y: 99%;
+  background-position-x: center;
+}
+
+.hearts {
+  background-image: url("../../assets/hearts.png");
+  background-size: 80%;
+  background-position: center;
+}
+
+.cardValue {
+  font-size: 1.5em;
+  color: white;
 }
