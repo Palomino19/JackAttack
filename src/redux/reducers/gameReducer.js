@@ -5,23 +5,21 @@ import produce from "immer";
 
 const initialState = {
   activePlayer: 1,
-  deck,
-  // : _.shuffle(deck)
+  deck: _.shuffle(deck),
 };
 
 const gameReducer = produce((state = initialState, action) => {
   switch (action.type) {
-    // case ACTIONS.DRAW_CARD:
-    //   break;
-    // case ACTIONS.NEXT_TURN:
-    //   state.activePlayer + 1;
-    //   break;
-    case ACTIONS.DEAL_CARD:
-      console.log("logging card=====" + JSON.stringify(state.deck.slice(0, 0)));
-      state.deck.push(action.payload.card);
+    case ACTIONS.DRAW_CARD:
       break;
+    case ACTIONS.NEXT_TURN:
+      state.activePlayer++;
+      break;
+    case ACTIONS.DEAL_CARD:
+      state.deck.shift();
+      break;
+    default:
+      return state;
   }
-
-  return state;
 });
 export default gameReducer;

@@ -1,0 +1,23 @@
+.boardContainer {
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.board {
+  padding: 0.8rem;
+  border: solid red 3px;
+  display: grid;
+  grid-template-columns: [line1-start] 7.2rem [line2] 7.2rem [line3] 7.2rem [line4] 7.2rem [line5] 7.2rem [line6] 7.2rem [line7] 7.2rem [line8] 7.2rem [line9] 7.2rem [line10] 7.2rem [line11-end];
+  grid-column-gap: 1.2rem;
+  grid-template-rows: [row1-start] 5.2rem [row2] 5.2rem [row3] 5.2rem [row4] 5.2rem [row5] 5.2rem [row6] 5.2rem [row7] 5.2rem [row8] 5.2rem [row9] 5.2rem [row10] 5.2rem [row11-end];
+  grid-row-gap: 0.4rem;
+}
+
+.boardSpace {
+  border: solid 1pt gray;
+  background-color: whitesmoke;
+  border-radius: 5%;
+}

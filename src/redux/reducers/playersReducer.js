@@ -10,9 +10,9 @@ const playersReducer = produce((state = initialState, action) => {
     case ACTIONS.DEAL_CARD:
       state.players[action.payload.playerIndex].hand.push(action.payload.card);
       break;
+    default:
+      return state;
   }
-
-  return state;
 });
 
 export default playersReducer;
