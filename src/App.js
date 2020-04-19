@@ -8,8 +8,11 @@ import styles from "./app.module.css";
 function App() {
   return (
     <Provider store={store}>
-      {/* <Button /> */}
-      <Board className={styles.boardContainer}></Board>
+      <div className={styles.appWrapper}>
+        <div className={styles.leftPanel}></div>
+        <Board className={styles.boardContainer}></Board>
+        <div className={styles.rightPanel}></div>
+      </div>
     </Provider>
   );
 }

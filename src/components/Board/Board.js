@@ -1,9 +1,7 @@
-/* eslint-disable no-unreachable */
 import React from "react";
 import styles from "./board.module.css";
 import cx from "classnames";
 import deck from "../../data/defaultBoardSpaces.json";
-// import _ from "lodash";
 
 function Board(props) {
   const { activePlayer, nextTurn, dealCard, boardSpaces } = props;
@@ -21,28 +19,28 @@ function Board(props) {
                   <p className={styles.cardValue}>{card.value}</p>
                 </div>
               );
-              break;
+
             case "diamonds":
               return (
                 <div className={cx(styles.boardSpace, styles.diamonds)}>
                   <p className={styles.cardValue}>{card.value}</p>
                 </div>
               );
-              break;
+
             case "clubs":
               return (
                 <div className={cx(styles.boardSpace, styles.clubs)}>
                   <p className={styles.cardValue}>{card.value}</p>
                 </div>
               );
-              break;
+
             case "hearts":
               return (
                 <div className={cx(styles.boardSpace, styles.hearts)}>
                   <p className={styles.cardValue}>{card.value}</p>
                 </div>
               );
-              break;
+
             default:
               return <div className={cx(styles.boardSpace)}>FREE SPACE</div>;
           }
