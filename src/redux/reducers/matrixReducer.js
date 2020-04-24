@@ -1,13 +1,16 @@
 import * as ACTIONS from "../actions";
-// import defaultMatrix from "../../data/matrixSpaces.json";
+import defaultMatrix from "../../data/matrixSpaces.json";
+import produce from "immer";
 
-const initialState = {};
+const initialState = { matrix: defaultMatrix };
 
-function matrixReducer(state = initialState, action) {
+const matrixReducer = produce((state = initialState, action) => {
   switch (action.type) {
+    case ACTIONS.CLAIM_BOARD_SPACE:
+      state.matrix[action.payload.cardBoardIndex].isClaimedBy = 1;
+      break;
+    default:
+      return state;
   }
-
-  return state;
-}
-
+});
 export default matrixReducer;

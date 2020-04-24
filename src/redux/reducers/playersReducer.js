@@ -10,6 +10,11 @@ const playersReducer = produce((state = initialState, action) => {
     case ACTIONS.DEAL_CARD:
       state.players[action.payload.playerIndex].hand.push(action.payload.card);
       break;
+    case ACTIONS.CLAIM_BOARD_SPACE:
+      state.players[action.payload.playerIndex].hand.filter(
+        (card) => card !== action.payload.cardObj
+      );
+      break;
     default:
       return state;
   }

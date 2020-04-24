@@ -7,3 +7,4 @@ export const DRAW_CARD = "DRAW_CARD";
 export const PLAY_CARD = "PLAY_CARD";
 
 // THE  MATRIX
+export const CLAIM_BOARD_SPACE = "CLAIM_BOARD_SPACE";

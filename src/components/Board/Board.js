@@ -1,22 +1,44 @@
 import React from "react";
 import styles from "./board.module.css";
 import cx from "classnames";
-import deck from "../../data/defaultBoardSpaces.json";
+
+//import actions
 
 function Board(props) {
-  const { activePlayer, nextTurn, dealCard, boardSpaces } = props;
-  // let decks = _.shuffle(deck);
+  const { board, playerHand, claimBoardSpace, activePlayer, deck } = props;
   return (
     <div className={styles.boardContainer}>
-      {/* GAMEBOARD */}
       <div className={styles.board}>
-        {/* // Map the deck to the grids on the board */}
-        {deck.map((card) => {
+        {board.matrix.map((card) => {
+          let cardObj = { suit: card.suit, value: card.value };
           switch (card.suit) {
             case "spades":
               return (
-                <div className={cx(styles.boardSpace, styles.spades)}>
-                  <p className={styles.cardValue}>{card.value}</p>
+                <div
+                  className={cx(styles.boardSpace, styles.spades)}
+                  onClick={() =>
+                    claimBoardSpace(
+                      card,
+                      board.matrix.indexOf(card),
+                      activePlayer,
+                      cardObj
+                    )
+                  }
+                >
+                  <p className={styles.cardValue}>
+                    <span
+                      className={
+                        card.isClaimedBy === 1
+                          ? styles.claimedGreen
+                          : card.isClaimedBy === 2
+                          ? styles.claimedBlue
+                          : card.isClaimedBy === 3
+                          ? styles.freebie
+                          : styles.empty
+                      }
+                    ></span>
+                    {card.value}
+                  </p>
                 </div>
               );
 
@@ -40,7 +62,6 @@ function Board(props) {
                   <p className={styles.cardValue}>{card.value}</p>
                 </div>
               );
-
             default:
               return <div className={cx(styles.boardSpace)}>FREE SPACE</div>;
           }

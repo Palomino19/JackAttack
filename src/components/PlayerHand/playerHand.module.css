@@ -1,0 +1,10 @@
+.playerHandContainer {
+  display: flex;
+  justify-content: center;
+  flex-flow: column-reverse;
+}
+
+.playerCard {
+  display: inline-block;
+  border: solid red 5pt;
+}
