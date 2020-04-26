@@ -18,7 +18,7 @@ const database = firebase.database();
 
 export const addBoardStateFirebase = (boardState) => {
   const id = uuid();
-  database.ref(id).set({
+  database.ref("board").set({
     boardState,
     id,
   });

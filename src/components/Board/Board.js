@@ -39,7 +39,7 @@ function Board(props) {
                     ? () =>
                         claimBoardSpace(
                           card,
-                          board.matrix.indexOf(card),
+                          board.indexOf(card),
                           activePlayer
                           // cardObj
                         )
