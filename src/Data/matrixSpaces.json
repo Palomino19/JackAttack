@@ -2,88 +2,88 @@
   {
     "suit": "null",
     "value": "null",
-    "isClaimedBy": 0,
-    "isLocked": "false"
-  },
-  {
-    "suit": "clubs",
-    "value": "A",
-    "isClaimedBy": 0,
-    "isLocked": "false"
-  },
-  {
-    "suit": "clubs",
-    "value": "K",
-    "isClaimedBy": 0,
-    "isLocked": "false"
-  },
-  {
-    "suit": "clubs",
-    "value": "Q",
-    "isClaimedBy": 0,
-    "isLocked": "false"
-  },
-  {
-    "suit": "clubs",
-    "value": 10,
-    "isClaimedBy": 0,
-    "isLocked": "false"
-  },
-  {
-    "suit": "clubs",
-    "value": 9,
-    "isClaimedBy": 0,
-    "isLocked": "false"
-  },
-  {
-    "suit": "clubs",
-    "value": 8,
-    "isClaimedBy": 0,
-    "isLocked": "false"
-  },
-  {
-    "suit": "clubs",
-    "value": 7,
-    "isClaimedBy": 0,
-    "isLocked": "false"
-  },
-  {
-    "suit": "clubs",
-    "value": 6,
-    "isClaimedBy": 0,
-    "isLocked": "false"
-  },
-  {
-    "suit": "null",
-    "value": "null",
-    "isClaimedBy": 0,
-    "isLocked": "false"
-  },
-  {
-    "suit": "diamonds",
-    "value": "A",
-    "isClaimedBy": 0,
-    "isLocked": "false"
-  },
-  {
-    "suit": "spades",
-    "value": 7,
-    "isClaimedBy": 1,
-    "isLocked": "false"
-  },
-  {
-    "suit": "spades",
-    "value": 8,
-    "isClaimedBy": 2,
-    "isLocked": "false"
-  },
-  {
-    "suit": "spades",
-    "value": 9,
     "isClaimedBy": 3,
     "isLocked": "false"
   },
   {
+    "suit": "clubs",
+    "value": "A",
+    "isClaimedBy": 0,
+    "isLocked": "false"
+  },
+  {
+    "suit": "clubs",
+    "value": "K",
+    "isClaimedBy": 0,
+    "isLocked": "false"
+  },
+  {
+    "suit": "clubs",
+    "value": "Q",
+    "isClaimedBy": 0,
+    "isLocked": "false"
+  },
+  {
+    "suit": "clubs",
+    "value": 10,
+    "isClaimedBy": 0,
+    "isLocked": "false"
+  },
+  {
+    "suit": "clubs",
+    "value": 9,
+    "isClaimedBy": 0,
+    "isLocked": "false"
+  },
+  {
+    "suit": "clubs",
+    "value": 8,
+    "isClaimedBy": 0,
+    "isLocked": "false"
+  },
+  {
+    "suit": "clubs",
+    "value": 7,
+    "isClaimedBy": 0,
+    "isLocked": "false"
+  },
+  {
+    "suit": "clubs",
+    "value": 6,
+    "isClaimedBy": 0,
+    "isLocked": "false"
+  },
+  {
+    "suit": "null",
+    "value": "null",
+    "isClaimedBy": 3,
+    "isLocked": "false"
+  },
+  {
+    "suit": "diamonds",
+    "value": "A",
+    "isClaimedBy": 0,
+    "isLocked": "false"
+  },
+  {
+    "suit": "spades",
+    "value": 7,
+    "isClaimedBy": 0,
+    "isLocked": "false"
+  },
+  {
+    "suit": "spades",
+    "value": 8,
+    "isClaimedBy": 0,
+    "isLocked": "false"
+  },
+  {
+    "suit": "spades",
+    "value": 9,
+    "isClaimedBy": 0,
+    "isLocked": "false"
+  },
+  {
     "suit": "spades",
     "value": 10,
     "isClaimedBy": 0,
@@ -542,7 +542,7 @@
   {
     "suit": "null",
     "value": "null",
-    "isClaimedBy": 0,
+    "isClaimedBy": 3,
     "isLocked": "false"
   },
   {
@@ -596,7 +596,7 @@
   {
     "suit": "null",
     "value": "null",
-    "isClaimedBy": 0,
+    "isClaimedBy": 3,
     "isLocked": "false"
   }
 ]

@@ -1,4 +1,4 @@
-import PlayerHand from "./PlayerHand";
+import PlayingCard from "./PlayingCard";
 import { connect } from "react-redux";
 import nextTurn from "../../redux/actions/game/nextTurn";
 import dealCard from "../../redux/actions/game/dealCard";
@@ -25,4 +25,4 @@ const mapDispatchToProps = {
   makeCardActive,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(PlayerHand);
+export default connect(mapStateToProps, mapDispatchToProps)(PlayingCard);

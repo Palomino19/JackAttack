@@ -8,7 +8,6 @@
 
 .board {
   padding: 0.8rem;
-  border: solid red 3px;
   display: grid;
   grid-template-columns: [line1-start] 7.2rem [line2] 7.2rem [line3] 7.2rem [line4] 7.2rem [line5] 7.2rem [line6] 7.2rem [line7] 7.2rem [line8] 7.2rem [line9] 7.2rem [line10] 7.2rem [line11-end];
   grid-column-gap: 1.2rem;

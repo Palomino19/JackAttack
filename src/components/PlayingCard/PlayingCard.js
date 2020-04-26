@@ -3,13 +3,17 @@ import cx from "classnames";
 import styles from "./playingCard.module.css";
 
 function PlayingCard(props) {
-  const { value, suit } = props;
+  const { suit, value, makeCardActive } = props;
   switch (suit) {
     case "spades":
       return (
         <div className={cx(styles.card, styles.spades)}>
           <p className={styles.cardValue}>
-            {value} of {suit}
+            {value === "J" && suit === ("spades" || "hearts")
+              ? `One eyed Jack`
+              : value === "J" && suit === ("clubs" || "diamonds")
+              ? `Two eyed Jack`
+              : `${value} of ${suit}`}
           </p>
         </div>
       );
@@ -18,7 +22,11 @@ function PlayingCard(props) {
       return (
         <div className={cx(styles.card, styles.diamonds)}>
           <p className={styles.cardValue}>
-            {value} of {suit}
+            {value === "J" && suit === ("spades" || "hearts")
+              ? `One eyed Jack`
+              : value === "J" && suit === ("clubs" || "diamonds")
+              ? `Two eyed Jack`
+              : `${value} of ${suit}`}
           </p>
         </div>
       );
@@ -27,7 +35,11 @@ function PlayingCard(props) {
       return (
         <div className={cx(styles.card, styles.clubs)}>
           <p className={styles.cardValue}>
-            {value} of {suit}
+            {value === "J" && suit === ("spades" || "hearts")
+              ? `One eyed Jack`
+              : value === "J" && suit === ("clubs" || "diamonds")
+              ? `Two eyed Jack`
+              : `${value} of ${suit}`}
           </p>
         </div>
       );
@@ -36,7 +48,19 @@ function PlayingCard(props) {
       return (
         <div className={cx(styles.card, styles.hearts)}>
           <p className={styles.cardValue}>
-            {value} of {suit}
+            {value === "J" && suit === ("spades" || "hearts")
+              ? `One eyed Jack`
+              : value === "J" && suit === ("clubs" || "diamonds")
+              ? `Two eyed Jack`
+              : `${value} of ${suit}`}
+          </p>
+        </div>
+      );
+    case "wild":
+      return (
+        <div className={cx(styles.card, styles.hearts)}>
+          <p className={styles.cardValue}>
+            You got a {value}! (remove/wildcard)
           </p>
         </div>
       );

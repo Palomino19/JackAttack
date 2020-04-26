@@ -9,6 +9,7 @@ const mapStateToProps = (state) => ({
   board: state.matrix,
   deck: state.game.deck,
   playerHand: state.players.players,
+  player1ActiveCard: state.players.players[0].activeCard,
 });
 
 const mapDispatchToProps = {
