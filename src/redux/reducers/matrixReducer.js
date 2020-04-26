@@ -1,8 +1,8 @@
 import * as ACTIONS from "../actions";
-import defaultMatrix from "../../data/matrixSpaces.json";
+import matrix from "../../data/matrixSpaces.json";
 import produce from "immer";
 
-const initialState = { matrix: defaultMatrix };
+const initialState = { matrix };
 
 const matrixReducer = produce((state = initialState, action) => {
   switch (action.type) {
