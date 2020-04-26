@@ -18,6 +18,7 @@ const playersReducer = produce((state = initialState, action) => {
     case ACTIONS.MAKE_CARD_ACTIVE:
       state.players[action.payload.playerIndex].activeCard =
         action.payload.card;
+      break;
     case ACTIONS.CLAIM_BOARD_SPACE:
       const foundIndex = state.players[
         action.payload.playerIndex

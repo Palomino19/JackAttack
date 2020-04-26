@@ -69,25 +69,17 @@ function Board(props) {
               key={index}
               className={cx(styles.boardSpace, individualSuit)}
               onClick={
-                playerHand[activePlayer].hand.find((playerHandCard) => {
-                  console.log(
-                    `Player Card is the: ${playerHandCard.value} of ${playerHandCard.suit}`
-                  );
-                  console.log(
-                    `Board Space Card is the: ${card.value} of ${card.suit}`
-                  );
-                  return (
-                    playerHandCard.suit == card.suit &&
-                    playerHandCard.value == card.value
-                  );
-                })
-                  ? () =>
-                      claimBoardSpace(
-                        card,
-                        board.matrix.indexOf(card),
-                        activePlayer
-                        // cardObj
-                      )
+                playerHand[activePlayer].activeCard
+                  ? playerHand[activePlayer].activeCard.suit === card.suit &&
+                    playerHand[activePlayer].activeCard.value === card.value
+                    ? () =>
+                        claimBoardSpace(
+                          card,
+                          board.matrix.indexOf(card),
+                          activePlayer
+                          // cardObj
+                        )
+                    : undefined
                   : undefined
               }
             >
