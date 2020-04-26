@@ -1,5 +1,5 @@
 import * as ACTIONS from "../actions";
-import newDeck from "../../data/deck.json";
+import newDeck from "../../Data/deck.json";
 import _ from "lodash";
 import produce from "immer";
 

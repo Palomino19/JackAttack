@@ -42,3 +42,19 @@ isWild: true/False
         default
         return false
     }
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<!-- <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+// Your web app's Firebase configuration
+var firebaseConfig = {
+apiKey: "AIzaSyAaZEHRpNv8Ph483YBZb1-rbthYKQ5QU6A",
+authDomain: "increaselimit.firebaseapp.com",
+databaseURL: "https://increaselimit.firebaseio.com",
+projectId: "increaselimit",
+storageBucket: "increaselimit.appspot.com",
+messagingSenderId: "615706483903",
+appId: "1:615706483903:web:40bb7bf973f5b8245eba0a"
