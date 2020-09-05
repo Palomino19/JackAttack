@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import nextTurn from "../../redux/actions/game/nextTurn";
 import dealCard from "../../redux/actions/game/dealCard";
 import claimBoardSpace from "../../redux/actions/theMatrix/claimBoardspace";
+import clearActiveCard from "../../redux/actions/players/clearActiveCard";
 import { getBoardStateThunk } from "../../redux/thunks/getBoardStateThunk";
 
 const mapStateToProps = (state) => ({
@@ -18,6 +19,7 @@ const mapDispatchToProps = {
   dealCard,
   claimBoardSpace,
   getBoardStateThunk,
+  clearActiveCard,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Board);

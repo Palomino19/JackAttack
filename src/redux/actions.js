@@ -6,6 +6,7 @@ export const DEAL_CARD = "DEAL_CARD";
 export const DRAW_CARD = "DRAW_CARD";
 export const PLAY_CARD = "PLAY_CARD";
 export const MAKE_CARD_ACTIVE = "MAKE_CARD_ACTIVE";
+export const CLEAR_ACTIVE_CARD = "CLEAR_ACTIVE_CARD";
 
 // THE  MATRIX
 export const CLAIM_BOARD_SPACE = "CLAIM_BOARD_SPACE";

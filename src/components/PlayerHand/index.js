@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import nextTurn from "../../redux/actions/game/nextTurn";
 import dealCard from "../../redux/actions/game/dealCard";
 import makeCardActive from "../../redux/actions/players/makeCardActive";
+import clearActiveCard from "../../redux/actions/players/clearActiveCard";
 
 const mapStateToProps = (state) => ({
   activePlayer: state.game.activePlayer,
@@ -23,6 +24,7 @@ const mapDispatchToProps = {
   nextTurn,
   dealCard,
   makeCardActive,
+  clearActiveCard,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(PlayerHand);

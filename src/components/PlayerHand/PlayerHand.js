@@ -3,7 +3,13 @@ import styles from "./playerHand.module.css";
 import PlayingCard from "../PlayingCard/";
 
 function PlayerHand(props) {
-  const { activePlayer, playerHand, player2ActiveCard, makeCardActive } = props;
+  const {
+    activePlayer,
+    playerHand,
+    player2ActiveCard,
+    makeCardActive,
+    clearActiveCard,
+  } = props;
   return (
     <div className={styles.playerHandContainer}>
       <div>
@@ -23,10 +29,12 @@ function PlayerHand(props) {
 
       <h2> This is the card you will play:</h2>
       {playerHand[activePlayer].activeCard ? (
-        <PlayingCard
-          suit={playerHand[activePlayer].activeCard.suit}
-          value={playerHand[activePlayer].activeCard.value}
-        ></PlayingCard>
+        <div onClick={() => clearActiveCard(activePlayer)}>
+          <PlayingCard
+            suit={playerHand[activePlayer].activeCard.suit}
+            value={playerHand[activePlayer].activeCard.value}
+          ></PlayingCard>
+        </div>
       ) : (
         <p>You have not chosen a card to play yet.</p>
       )}

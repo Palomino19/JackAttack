@@ -8,6 +8,7 @@ function Board(props) {
   const {
     board,
     claimBoardSpace,
+    clearActiveCard,
     activePlayer,
     playerHand,
     player1ActiveCard,
@@ -16,6 +17,11 @@ function Board(props) {
     // Update the document title using the browser API
     addBoardStateFirebase(board);
   });
+
+  const executeBoardClaim = (card) => {
+    claimBoardSpace(card, board.indexOf(card), activePlayer);
+    clearActiveCard(activePlayer);
+  };
   return (
     <div className={styles.boardContainer}>
       <div className={styles.board}>
@@ -36,13 +42,7 @@ function Board(props) {
                 playerHand[activePlayer].activeCard
                   ? playerHand[activePlayer].activeCard.suit === card.suit &&
                     playerHand[activePlayer].activeCard.value === card.value
-                    ? () =>
-                        claimBoardSpace(
-                          card,
-                          board.indexOf(card),
-                          activePlayer
-                          // cardObj
-                        )
+                    ? () => executeBoardClaim(card)
                     : undefined
                   : undefined
               }
