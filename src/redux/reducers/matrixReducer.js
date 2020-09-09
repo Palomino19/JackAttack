@@ -7,7 +7,8 @@ const initialState = { matrix };
 const matrixReducer = produce((state = initialState, action) => {
   switch (action.type) {
     case ACTIONS.CLAIM_BOARD_SPACE:
-      state.matrix[action.payload.cardBoardIndex].isClaimedBy = 1;
+      state.matrix[action.payload.cardBoardIndex].isClaimedBy =
+        action.payload.team;
       break;
     case ACTIONS.GET_BOARD_STATE:
       state.matrix = action.payload.board;

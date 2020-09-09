@@ -8,6 +8,7 @@ import { getBoardStateThunk } from "../../redux/thunks/getBoardStateThunk";
 
 const mapStateToProps = (state) => ({
   activePlayer: state.game.activePlayer,
+  activeTeam: state.game.activeTeam,
   board: state.matrix.matrix,
   deck: state.game.deck,
   playerHand: state.players.players,

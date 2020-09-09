@@ -14,17 +14,19 @@ function PlayerHand(props) {
     <div className={styles.playerHandContainer}>
       <div>
         <h1> This is your Hand:</h1>
-        {playerHand[activePlayer].hand.map((card, index) => {
-          const activatedCard = { suit: card.suit, value: card.value };
-          return (
-            <div
-              key={index}
-              onClick={() => makeCardActive(activatedCard, 1, activePlayer)}
-            >
-              <PlayingCard suit={card.suit} value={card.value}></PlayingCard>
-            </div>
-          );
-        })}
+        {/* {console.log("BUGGERY", playerHand[activePlayer].hand)} */}
+        {playerHand[activePlayer].hand &&
+          playerHand[activePlayer].hand.map((card, index) => {
+            const activatedCard = { suit: card.suit, value: card.value };
+            return (
+              <div
+                key={index}
+                onClick={() => makeCardActive(activatedCard, 1, activePlayer)}
+              >
+                <PlayingCard suit={card.suit} value={card.value}></PlayingCard>
+              </div>
+            );
+          })}
       </div>
 
       <h2> This is the card you will play:</h2>

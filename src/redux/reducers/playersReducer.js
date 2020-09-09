@@ -3,10 +3,10 @@ import produce from "immer";
 
 const initialState = {
   players: [
-    { hand: [], activeCard: null },
-    { hand: [], activeCard: null },
-    { hand: [], activeCard: null },
-    { hand: [], activeCard: null },
+    { hand: [], activeCard: [] },
+    { hand: [], activeCard: [] },
+    { hand: [], activeCard: [] },
+    { hand: [], activeCard: [] },
   ],
 };
 
@@ -24,13 +24,13 @@ const playersReducer = produce((state = initialState, action) => {
       break;
     case ACTIONS.CLAIM_BOARD_SPACE:
       const foundIndex = state.players[
-        action.payload.playerIndex
+        action.payload.activePlayer
       ].hand.findIndex(
         (card) =>
           card.suit === action.payload.card.suit &&
           card.value === action.payload.card.value
       );
-      state.players[action.payload.playerIndex].hand.splice(foundIndex, 1);
+      state.players[action.payload.activePlayer].hand.splice(foundIndex, 1);
       break;
     default:
       return state;

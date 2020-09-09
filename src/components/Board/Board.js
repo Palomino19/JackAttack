@@ -10,16 +10,18 @@ function Board(props) {
     claimBoardSpace,
     clearActiveCard,
     activePlayer,
+    activeTeam,
     playerHand,
     player1ActiveCard,
-  } = props;
+  } = props || {};
   useEffect(() => {
     // Update the document title using the browser API
     addBoardStateFirebase(board);
   });
 
   const executeBoardClaim = (card) => {
-    claimBoardSpace(card, board.indexOf(card), activePlayer);
+    console.log("ACTIVE TEAM", activeTeam);
+    claimBoardSpace(card, board.indexOf(card), activePlayer, activeTeam);
     clearActiveCard(activePlayer);
   };
   return (

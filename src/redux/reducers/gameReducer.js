@@ -4,7 +4,8 @@ import _ from "lodash";
 import produce from "immer";
 
 const initialState = {
-  activePlayer: 1,
+  activePlayer: 0,
+  activeTeam: 1,
   deck: _.shuffle(newDeck),
 };
 
@@ -13,7 +14,8 @@ const gameReducer = produce((state = initialState, action) => {
     case ACTIONS.DRAW_CARD:
       break;
     case ACTIONS.NEXT_TURN:
-      state.activePlayer++;
+      state.activePlayer = action.payload.nextPlayer;
+      state.activeTeam = action.payload.nextTeam;
       break;
     case ACTIONS.DEAL_CARD:
       state.deck.shift();
