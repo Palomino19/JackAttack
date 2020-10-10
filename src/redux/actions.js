@@ -1,6 +1,7 @@
 // GAME
 export const NEXT_TURN = "NEXT_TURN";
 export const DEAL_CARD = "DEAL_CARD";
+export const TEAM_SCORES = "TEAM_SCORES";
 
 //PLAYERS
 export const DRAW_CARD = "DRAW_CARD";

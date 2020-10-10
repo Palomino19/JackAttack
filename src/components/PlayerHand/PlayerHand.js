@@ -3,13 +3,7 @@ import styles from "./playerHand.module.css";
 import PlayingCard from "../PlayingCard/";
 
 function PlayerHand(props) {
-  const {
-    activePlayer,
-    playerHand,
-    player2ActiveCard,
-    makeCardActive,
-    clearActiveCard,
-  } = props;
+  const { activePlayer, playerHand, makeCardActive, clearActiveCard } = props;
   return (
     <div className={styles.playerHandContainer}>
       <div>

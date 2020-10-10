@@ -6,6 +6,8 @@ import produce from "immer";
 const initialState = {
   activePlayer: 0,
   activeTeam: 1,
+  team1Score: 0,
+  team2Score: 0,
   deck: _.shuffle(newDeck),
 };
 
@@ -19,6 +21,9 @@ const gameReducer = produce((state = initialState, action) => {
       break;
     case ACTIONS.DEAL_CARD:
       state.deck.shift();
+      break;
+    case ACTIONS.TEAM_SCORES:
+      state[action.payload.team] = action.payload.newScore;
       break;
     default:
       return state;
